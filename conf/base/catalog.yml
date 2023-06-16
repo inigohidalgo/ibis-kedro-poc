@@ -4,9 +4,13 @@
 # Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
 
 raw_table:
-  type: ibis_kedro_poc.extras.datasets.lazy_load.lazy_load_ibis_dataset.IbisDataSet
+  type: kedro_ibis_dataset.kedro_ibis_dataset.IbisDataSet
   table_name: test_dataset
   credentials: test_duckdb
+
+filtered_data:
+  type: MemoryDataSet
+  copy_mode: assign
 
 data_df:
   type: pandas.ParquetDataSet
