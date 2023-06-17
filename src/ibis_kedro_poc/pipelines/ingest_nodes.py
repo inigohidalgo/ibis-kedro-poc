@@ -7,4 +7,4 @@ def filter_dates(data: ibis.table, start_date: str, end_date: str) -> ibis.table
 
 
 def ibis_table_to_df(data: ibis.table) -> pd.DataFrame:
-    return data.execute()
+    return data.to_pandas()
