@@ -4,6 +4,7 @@ version = ""
 description = ""
 authors = [{ name = "Iñigo Hidalgo Rey", email = "inigohrey@gmail.com" }]
 dependencies = [
+    "kedro-ibis-dataset==0.0.6",
     "pandas",
     "kedro==0.17.1",
     "duckdb",
@@ -12,7 +13,6 @@ dependencies = [
     # pin non-bugged dynaconf
     "dynaconf==3.1.5",
     "kedro==0.17.1",
-    "kedro-ibis-dataset>=0.0.6b1",
 ]
 
 [tool.kedro]
