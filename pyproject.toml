@@ -1,3 +1,20 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [{ name = "Iñigo Hidalgo Rey", email = "inigohrey@gmail.com" }]
+dependencies = [
+    "pandas",
+    "kedro==0.17.1",
+    "duckdb",
+    "polars",
+    "ibis-framework[duckdb,mssql]",
+    # pin non-bugged dynaconf
+    "dynaconf==3.1.5",
+    "kedro==0.17.1",
+    "kedro-ibis-dataset>=0.0.6b1",
+]
+
 [tool.kedro]
 package_name = "ibis_kedro_poc"
 project_name = "Ibis Kedro PoC"
@@ -16,34 +33,12 @@ addopts = """
 --cov-report term-missing \
 --cov src/ibis_kedro_poc -ra"""
 
-[project]
-name = ""
-version = ""
-description = ""
-authors = [{ name = "Iñigo Hidalgo Rey", email = "inigohrey@gmail.com" }]
-dependencies = [
-    "pandas",
-    "kedro==0.17.1",
-    "duckdb",
-    "polars",
-    "ibis-framework[duckdb,mssql]",
-    # pin non-bugged dynaconf
-    "dynaconf==3.1.5",
-    # "black==v19.10b0",
-    # "flake8<4.0,>=3.7.9",
-    # "ipython==7.10",
-    # "isort<5.0,>=4.3.21",
-    # "jupyter~=1.0",
-    # "jupyter-client<7.0,>=5.1",
-    # "jupyterlab==0.31.1",
-    "kedro==0.17.1",
-    # "nbstripout==0.3.3",
-    # "pytest-cov~=2.5",
-    # "pytest-mock<2.0,>=1.7.1",
-    # "pytest~=6.1.2",
-    # "wheel==0.32.2",
-    "kedro-ibis-dataset>0.0.1",
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "kedro-viz==4.6.0",
 ]
+
 requires-python = ">=3.8,<3.9"
 license = { text = "MIT" }
 
