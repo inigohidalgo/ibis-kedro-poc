@@ -4,7 +4,7 @@
 # Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
 
 raw_table:
-  type: kedro_ibis_dataset.kedro_ibis_dataset.IbisDataSet
+  type: kedro_ibis_dataset.IbisDataSet
   table_name: test_dataset
   credentials: test_duckdb
   save_args:
