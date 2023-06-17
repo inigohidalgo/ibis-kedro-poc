@@ -7,12 +7,14 @@ raw_table:
   type: kedro_ibis_dataset.kedro_ibis_dataset.IbisDataSet
   table_name: test_dataset
   credentials: test_duckdb
+  save_args:
+    overwrite: true
 
 filtered_data:
   type: MemoryDataSet
   copy_mode: assign
 
 data_df:
-  type: pandas.ParquetDataSet
-  filepath: data/02_intermediate/data_df.parquet
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/data_df.csv
 
