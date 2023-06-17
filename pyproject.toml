@@ -12,8 +12,9 @@ dependencies = [
     "ibis-framework[duckdb,mssql]",
     # pin non-bugged dynaconf
     "dynaconf==3.1.5",
-    "kedro==0.17.1",
 ]
+requires-python = ">=3.8,<3.9"
+license = { text = "MIT" }
 
 [tool.kedro]
 package_name = "ibis_kedro_poc"
@@ -39,8 +40,7 @@ dev = [
     "kedro-viz==4.6.0",
 ]
 
-requires-python = ">=3.8,<3.9"
-license = { text = "MIT" }
+
 
 [build-system]
 requires = ["pdm-backend"]
