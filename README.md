@@ -1,15 +1,17 @@
 # Ibis Kedro PoC
 
-Small proof-of-concept kedro pipeline loading data from SQL using `kedro-ibis-dataset`
+Small proof-of-concept kedro pipeline loading data from SQL using [`kedro-ibis-dataset`](https://pypi.org/project/kedro-ibis-dataset/)
 
-## Replication
+## How to run
 
-### Initiate database
+### 1. Install project
 
-Run the first section of the notebook `"notebooks/230604-initial-testing.ipynb"` to recreate the database which is input for the pipeline
+```bash
+python -m pip install .
+```
 
-### Run data ingestion pipeline
 
+### 2. Run pipeline
 ```bash
 python -m kedro run --pipeline ingest
 ```
